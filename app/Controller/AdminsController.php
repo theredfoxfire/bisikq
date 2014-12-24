@@ -70,10 +70,15 @@ class AdminsController extends AppController {
 		}
 
 		if (!empty($this->data) && ($this->request->is('post') || $this->request->is('put'))) {
+			$password = $this->request->data['Admin']['password'];
 			$newa = $this->request->data['Admin']['newpassword'];
 			$newb = $this->request->data['Admin']['cnewpassword'];
-			if($newa == $newb){
-				if($this->Auth->login()){
+			$odata = $this->Admin->findById($token);
+			$passwordHasher = new BlowfishPasswordHasher();
+			$storedHash = $odata['Admin']['password'];
+			$pass =  Security::hash($password, 'blowfish', $storedHash);
+			if(($newa == $newb) and ($odata['Admin']['password'] == $pass)){
+				
 				$this->request->data['Admin']['password'] = $this->request->data['Admin']['newpassword'];
 				if ($this->Admin->save($this->data)) {
 					$this->Session->setFlash(__('The admin has been saved'));
@@ -83,12 +88,9 @@ class AdminsController extends AppController {
 					unset($this->request->data['Admin']['password']);
 					$this->Session->setFlash(__('Password lama tidak cocok atau kombinasi password baru tidak sesuai, periksa kembali.'));
 				}
-			}else{
-				$this->data = $this->Admin->findById($token);
-					unset($this->request->data['Admin']['password']);
-					$this->Session->setFlash(__('Password lama tidak cocok atau kombinasi password baru tidak sesuai, periksa kembali.'));
-			}
 			} else{
+				$this->set('lpas',$pass);
+				$this->set('opas',$odata['Admin']['password']);
 				$this->data = $this->Admin->findById($token);
 					unset($this->request->data['Admin']['password']);
 					$this->Session->setFlash(__('Password lama tidak cocok atau kombinasi password baru tidak sesuai, periksa kembali.'));

@@ -19,7 +19,6 @@
 			<div class="panel-body">
 
                     <?php echo $this->Form->create('Admin');?>
-                       
                         <div class="control-group">
                           <div class="controls">
                            <?php
