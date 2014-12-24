@@ -1,0 +1,10 @@
+[18-Dec-2014 15:40:22 Asia/Jakarta] PHP Fatal error:  Cannot use string offset as an array in /home/aqicoid/public_html/projects/bisikq/app/View/Threads/add.ctp on line 72
+[19-Dec-2014 08:32:06 Asia/Jakarta] PHP Fatal error:  Cannot use string offset as an array in /home/aqicoid/public_html/projects/bisikq/app/View/Threads/edit.ctp on line 73
+[19-Dec-2014 08:32:14 Asia/Jakarta] PHP Fatal error:  Cannot use string offset as an array in /home/aqicoid/public_html/projects/bisikq/app/View/Threads/edit.ctp on line 73
+[19-Dec-2014 09:38:08 Asia/Jakarta] PHP Fatal error:  Call to a member function find() on a non-object in /home/aqicoid/public_html/projects/bisikq/app/Controller/ThreadreportsController.php on line 60
+[19-Dec-2014 09:38:58 Asia/Jakarta] PHP Fatal error:  Call to a member function find() on a non-object in /home/aqicoid/public_html/projects/bisikq/app/Controller/ThreadreportsController.php on line 60
+[19-Dec-2014 15:58:41 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ')' in /home/aqicoid/public_html/projects/bisikq/app/View/Admins/edit.ctp on line 64
+[19-Dec-2014 15:59:11 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ')' in /home/aqicoid/public_html/projects/bisikq/app/View/Admins/edit.ctp on line 64
+[19-Dec-2014 16:00:00 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ')' in /home/aqicoid/public_html/projects/bisikq/app/View/Admins/edit.ctp on line 64
+[19-Dec-2014 16:00:57 Asia/Jakarta] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/aqicoid/public_html/projects/bisikq/app/View/Admins/edit.ctp on line 65
+[19-Dec-2014 16:01:02 Asia/Jakarta] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/aqicoid/public_html/projects/bisikq/app/View/Admins/edit.ctp on line 65

@@ -1,0 +1,88 @@
+.navbar-static-top {
+  margin-bottom:0px;
+  background: #f15929;  border-color: #B63911;
+}
+
+i {
+  font-size:16px;
+}
+
+.nav > li > a {
+  color:#787878;
+}
+  
+footer { padding-top:20px;padding-bottom:20px;margin-top: 0px;background: #31333F;color: #DDD;
+}
+
+/* count indicator near icons */
+.nav>li .count {
+  position: absolute;
+  bottom: 12px;
+  right: 6px;
+  font-size: 9px;
+  background: rgba(51,200,51,0.55);
+  color: rgba(255,255,255,0.9);
+  line-height: 1em;
+  padding: 2px 4px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* indent 2nd level */
+.list-unstyled li > ul > li {
+   margin-left:10px;
+   padding:8px;
+}
+
+.login {width: 320px;margin: 0 auto;position: relative;margin-top: 10%;border-color: #f15929;}
+.login .panel-heading {background: #f15929;color: #FFF;border: 1px solid #B55113;padding: 5px 15px;text-align: center;}
+.login .panel-heading  h4 {font-size: 20px;font-weight: bold;text-shadow: 0px 1px 2px #000;}
+.login .panel-body {padding:15px 30px;}
+.login label {color: #666; margin-left: 5px;}
+.login .controls button {background: #F15929; border-color: #BB3A12;}
+.login .controls button:hover {background: #DF5125; border-color: #B54B0A;}
+.btn-primary {color: #fff;background-color: #F15929;border-color: #B63911;}
+.btn-primary:hover {color: #fff;background-color: #DF400E;border-color: #AE3D19;}
+.btn-cancel {color: #666;background-color: #C2C2C2;border-color: #9D9D9D;}
+.btn-cancel:hover {color: #fff;background-color: #747474;border-color: #595959;}
+.btn-add {background: #419BF4; border-color: #1A7FE2;}
+.btn-add:hover {background-color: #328BE4; border-color: #1476D7;}
+.btn-primary .active {color: #fff;background-color: #DF400E;border-color: #AE3D19;}
+
+/* navigasi */
+.navbar-inverse .navbar-brand {color:#FFF}
+.navbar-inverse .navbar-nav li a {color:#FFF}
+.navbar-inverse .navbar-nav li a:hover {color:#862608;border-left: none;}
+.navbar-inverse .navbar-toggle {border-color: #BE3A10}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {background:#C84117;}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {border-color: #C84117;}
+
+/* Sidebar */
+.sidebar {background: #DDD; border-right: 1px solid #CCC; padding:0px; min-height:650px}
+.sidebar li {height: 50px; border-bottom: 1px solid #BBB; margin-top:0px !important;}
+.nav-pills li.active a, .nav-pills li.active a:hover, .nav-pills li.active a:focus {color: #787878; border-left: 5px solid #F15929;text-decoration: none;background-color: #eee;}
+.sidebar li a {padding: 15px 20px; border-radius: 0px;}
+.nav li a:hover, .nav li a:focus {border-left: 5px solid #F15929;}
+
+/* Main Right */
+.main-right {margin-top: 20px;}
+.panel-default .panel-heading {background: #F15929;color: #FFF;padding: 5px 20px;}
+
+/* pagination */
+.pagination {margin: 5px 0px; float: right;}
+.pagination  .glyphicon{font-size: 12px;margin-top: 0px;}
+.pagination-sm li a {padding: 5px 10px; font-size: 14px; }
+.pagination li a:hover, .pagination li span:hover, .pagination li a:focus, .pagination li span:focus {color: #FFFFFF;background-color: #ED683E;border-color: #F15929;}
+
+/* Form */
+.control-group {margin-bottom: 10px;}
+
+.search-btn {background: #F15929
+;color: #FFF;padding: 1px 6px;border-radius: 0px;font-size: 18px;border-radius: 3px;border: 1px solid #FA7146;}
+.search-btn:hover {color: #FFF;background-color: #F77046;}
+.search-th {float:right; margin-top: 2px;}
+.search-th input {border-radius:0px; padding: 3px;}
+.search-th select {border-radius:0px; padding: 5px;} 
