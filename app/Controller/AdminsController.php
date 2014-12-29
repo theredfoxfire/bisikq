@@ -33,6 +33,11 @@ class AdminsController extends AppController {
 		parent::isAuth();
 		$this->Admin->recursive = 0;
 		$this->set('admins', $this->paginate());
+		$this->redirect(array( 'controller'=>'admins','action' => 'dashboard'));
+	}
+	function dashboard(){
+		parent::isAuth();
+		$this->set('dash', true);
 	}
 
 	function view($id = null) {
@@ -73,27 +78,32 @@ class AdminsController extends AppController {
 			$password = $this->request->data['Admin']['password'];
 			$newa = $this->request->data['Admin']['newpassword'];
 			$newb = $this->request->data['Admin']['cnewpassword'];
-			$odata = $this->Admin->findById($token);
+			if($newa == $newb){
+			$odata = $this->Admin->findByToken($token);
 			$passwordHasher = new BlowfishPasswordHasher();
 			$storedHash = $odata['Admin']['password'];
 			$pass =  Security::hash($password, 'blowfish', $storedHash);
-			if(($newa == $newb) and ($odata['Admin']['password'] == $pass)){
+			if($odata['Admin']['password'] == $pass){
 				
 				$this->request->data['Admin']['password'] = $this->request->data['Admin']['newpassword'];
 				if ($this->Admin->save($this->data)) {
 					$this->Session->setFlash(__('The admin has been saved'));
 					$this->redirect(array('action' => 'index'));
 				} else {
-					$this->data = $this->Admin->findById($token);
+					$this->data = $this->Admin->findByToken($token);
 					unset($this->request->data['Admin']['password']);
 					$this->Session->setFlash(__('Password lama tidak cocok atau kombinasi password baru tidak sesuai, periksa kembali.'));
 				}
 			} else{
-				$this->set('lpas',$pass);
-				$this->set('opas',$odata['Admin']['password']);
-				$this->data = $this->Admin->findById($token);
+				$this->data = $this->Admin->findByToken($token);
 					unset($this->request->data['Admin']['password']);
 					$this->Session->setFlash(__('Password lama tidak cocok atau kombinasi password baru tidak sesuai, periksa kembali.'));
+			}
+			
+			}else{
+				$this->data = $this->Admin->findByToken($token);
+				unset($this->request->data['Admin']['password']);
+				$this->Session->setFlash(__('Password lama tidak cocok atau kombinasi password baru tidak sesuai, periksa kembali.'));
 			}
 			
 		} else {
@@ -102,6 +112,7 @@ class AdminsController extends AppController {
 		}
 		if (empty($this->data)) {
 			$this->data = $this->Admin->findByToken($token);
+			unset($this->request->data['Admin']['password']);
 		}
 	}
 

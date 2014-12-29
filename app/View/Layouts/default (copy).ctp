@@ -3,50 +3,6 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<?php if(!isset($is_admin) and !isset($isAuth)){
-				$is_admin = 404; $isAuth = 404;
-				echo $this->Html->css(array('bootstrap.min','fontawesome/css/font-awesome.min','styles'));
-		?>
-		<style>#wrap {background:#FFF !important}</style>
-			<div id="wrap">
-		<header>
-			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-				<div class="container">
-					<div class="navbar-header">
-						<a class="logo navbar-brand" rel="home" href="/projects/bisikq/categories/index/">LOGO BISIKQ</a>
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						</button>
-					</div>
-					<div class="collapse navbar-collapse">
-						<div class="col-sm-3 col-md-3 pull-right">
-						  <form class="navbar-form" role="search" action="/projects/bisikq/threads/search" method="get">
-							<div class="input-group">
-								<input type="text" class="form-control" placeholder="Cari Thread" name="search" id="srch-term">
-								<div class="input-group-btn">
-									<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-								</div>
-							</div>
-						  </form>
-						</div>
-						
-					</div>
-				</div>
-			</nav>
-			<form class="mobile-search navbar-form" role="search" action="/projects/bisikq/threads/search" method="get">
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Cari Thread" name="search" id="srch-term">
-					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-					</div>
-				</div>
-			  </form>
-		</header>
-		<?php
-		} ?>
 		<title><?php echo (!$is_admin) ? "Selamat datang di BISIKQ" : "Managing BISIKQ" ; ?></title>
 		<meta name="keywords" content="bisikq, apartmen, komplek, area, ">
 		<meta name="description" content="Selamat datang di BISIKQ, ">

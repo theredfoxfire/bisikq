@@ -1,3 +1,6 @@
+html, body {height:100%}
+#wrap {min-height: 100%; margin-bottom:-60px;background: url(../img/bg-admin.png);background-size: contain;}
+#wrap:after {content:""; display:block; height:60px;}
 .navbar-static-top {
   margin-bottom:0px;
   background: #f15929;  border-color: #B63911;
@@ -52,6 +55,9 @@ footer { padding-top:20px;padding-bottom:20px;margin-top: 0px;background: #31333
 .btn-add:hover {background-color: #328BE4; border-color: #1476D7;}
 .btn-primary .active {color: #fff;background-color: #DF400E;border-color: #AE3D19;}
 
+button, html input[type=button], input[type=reset], input[type=submit] {color: #fff;background-color: #F15929; border:1px solid #B63911; padding:5px 15px; border-radius:3px;}
+button:hover, html input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover {color: #fff;background-color: #DF400E;border-color: #AE3D19;}
+.table thead tr th {white-space: nowrap;}
 /* navigasi */
 .navbar-inverse .navbar-brand {color:#FFF}
 .navbar-inverse .navbar-nav li a {color:#FFF}
@@ -61,7 +67,7 @@ footer { padding-top:20px;padding-bottom:20px;margin-top: 0px;background: #31333
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {border-color: #C84117;}
 
 /* Sidebar */
-.sidebar {background: #DDD; border-right: 1px solid #CCC; padding:0px; min-height:650px}
+.sidebar {background: #DDD; border-right: 1px solid #CCC; padding:0px; min-height:100%}
 .sidebar li {height: 50px; border-bottom: 1px solid #BBB; margin-top:0px !important;}
 .nav-pills li.active a, .nav-pills li.active a:hover, .nav-pills li.active a:focus {color: #787878; border-left: 5px solid #F15929;text-decoration: none;background-color: #eee;}
 .sidebar li a {padding: 15px 20px; border-radius: 0px;}
@@ -86,3 +92,33 @@ footer { padding-top:20px;padding-bottom:20px;margin-top: 0px;background: #31333
 .search-th {float:right; margin-top: 2px;}
 .search-th input {border-radius:0px; padding: 3px;}
 .search-th select {border-radius:0px; padding: 5px;} 
+.btn-add {margin-bottom:5px;}
+.table-responsive {width: 100%;margin-bottom: 15px;overflow-x: auto;overflow-y: hidden;-webkit-overflow-scrolling: touch;-ms-overflow-style: -ms-autohiding-scrollbar;border: 1px solid #ddd;}
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox] {width: 20px;margin-left: 5px;height: 18px;margin-top: 0px;}
+.checkbox label {margin-left:10px;}
+
+.wrap-login {padding-top: 20px; background:#FFF !important;}
+
+@media only screen and (max-width : 768px) {
+	.sidebar {display:none;}
+	#wrap {background: #FFF;}
+}
+@media only screen and (min-width : 768px) {
+	.h-menu {display:none !important;}
+}
+
+.nav li ul {background:#F15929;}
+.nav li ul li a:hover{background:none; color:#999;}
+
+.t-thread {background:#2F7D86; color:#fff; height: 150px;}
+.t-thread:hover {background:#588B92; text-decoration: none; color: #fff;}
+
+.t-category {background:#862F56; color:#fff; height: 150px;}
+.t-category:hover {background:#9F3E6A; text-decoration: none; color: #fff;}
+
+.t-reply {background:#5E862F; color:#fff; height: 150px;}
+.t-reply:hover {background:#769B4B; text-decoration: none; color: #fff;}
+
+.t-report {background:#7B070B; color:#fff; height: 150px;}
+.t-report:hover {background:#AA262A; text-decoration: none; color: #fff;}
